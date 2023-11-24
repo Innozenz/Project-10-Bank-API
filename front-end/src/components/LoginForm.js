@@ -30,8 +30,9 @@ const LoginForm = () => {
             <button onClick={handlelogout}>Logout</button>
             {myReduxState.isAuthenticated ? <p>Connecté</p>
             : <p>Pas connecté</p>
-
-
+            }
+            {myReduxState.error ? <p>{myReduxState.error}</p>
+            : <p></p>
             }
         </div>
     );
