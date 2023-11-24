@@ -8,7 +8,7 @@ export const checkLoggedInUser = () => async (dispatch) => {
 
     if (token) {
         // Si un token est présent, considérez l'utilisateur comme connecté
-        dispatch(loginSuccess({ user: null, token }));
+        dispatch(loginSuccess({ token }));
     } else {
         // Sinon, considérez l'utilisateur comme déconnecté
         dispatch(logout());
